@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Cadastrar Produto</h1>
+
+<form method="POST" action="/register">
+    <label>Nome:</label>
+    <input type="text" name="name" required>
+    
+    <label>URL:</label>
+    <input type="url" name="url" required>
+    
+    <label>Preço alvo (opcional):</label>
+    <input type="number" name="target" step="0.01">
+    
+    <button type="submit">Cadastrar</button>
+</form>
+{% endblock %}

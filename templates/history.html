@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Histórico do Produto {{ product_id }}</h1>
+
+<table>
+    <tr>
+        <th>Data</th>
+        <th>Preço</th>
+    </tr>
+    {% for h in history %}
+    <tr>
+        <td>{{ h[3] }}</td>
+        <td>£{{ h[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/products">Voltar</a>
+{% endblock %}
