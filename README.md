@@ -1,57 +1,57 @@
 # Multi-Store Bot
 
-Bot de monitoramento de precos que suporta multiplas lojas, com interface web, autenticacao, banco de dados e notificacoes por email.
+Price monitoring bot that supports multiple stores, with web interface, authentication, database and email notifications.
 
-## O que faz
+## What it does
 
-- Multi-loja: suporta sites estaticos (requests) e dinamicos (Playwright)
-- Cadastro de produtos: cada usuario cadastra seus produtos
-- Monitoramento automatico: roda a cada X minutos e salva o historico
-- Alertas por email: avisa quando o preco baixa do valor alvo
-- Historico de precos: guarda todas as variacoes
-- Backup do banco: copia de seguranca dos dados
-- Multi-usuario: login com email + senha (bcrypt)
-- Interface web: Flask + HTML + CSS
-- Isolamento: roda em Docker
-- Logs: registra tudo com rotacao automatica
+- Multi-store: supports static sites (requests) and dynamic sites (Playwright)
+- Product registration: each user registers their products
+- Automatic monitoring: runs every X minutes and saves history
+- Email alerts: notifies when price drops below target
+- Price history: stores all variations
+- Database backup: data safety copy
+- Multi-user: email + password login (bcrypt)
+- Web interface: Flask + HTML + CSS
+- Isolation: runs in Docker
+- Logs: records everything with automatic rotation
 
-## Tecnologias
+## Technologies
 
 - Python 3.14
-- Flask (framework web)
-- Flask-Login (autenticacao)
-- bcrypt (hash de senhas)
-- SQLite (banco de dados)
-- requests (requisicoes HTTP)
-- BeautifulSoup4 (parsing de HTML)
-- Playwright (automacao de navegador)
-- schedule (agendamento)
-- Docker (isolamento)
+- Flask (web framework)
+- Flask-Login (authentication)
+- bcrypt (password hashing)
+- SQLite (database)
+- requests (HTTP requests)
+- BeautifulSoup4 (HTML parsing)
+- Playwright (browser automation)
+- schedule (scheduling)
+- Docker (isolation)
 
-## Como rodar
+## How to run
 
-Com Docker:
+With Docker:
 
     docker-compose up
 
-Acessa http://localhost:5000
+Access http://localhost:5000
 
-Sem Docker:
+Without Docker:
 
     pip install -r requirements.txt
     python app.py
 
-## Configuracao
+## Configuration
 
-Crie um arquivo .env na raiz do projeto:
+Create a .env file in the project root:
 
-    EMAIL_USER=seuemail@gmail.com
-    EMAIL_PASS=sua_senha_de_app
-    EMAIL_TO=seuemail@gmail.com
+    EMAIL_USER=youremail@gmail.com
+    EMAIL_PASS=your_app_password
+    EMAIL_TO=youremail@gmail.com
 
-Importante: use uma senha de app do Gmail, nao a senha normal.
+Important: use a Gmail app password, not your normal password.
 
-## Estrutura
+## Structure
 
     multi-store-bot/
       app.py
@@ -67,25 +67,25 @@ Importante: use uma senha de app do Gmail, nao a senha normal.
       docker-compose.yml
       requirements.txt
 
-## Seguranca
+## Security
 
-- Senhas com bcrypt
-- Validacao de URLs com lista branca
-- SQL com parametros contra injecao
-- Bloqueio de requisicoes externas no Playwright
-- Docker isola o ambiente
-- .env nao sobe pro Git
+- Passwords with bcrypt
+- URL validation with whitelist
+- SQL with parameters against injection
+- External request blocking in Playwright
+- Docker isolates the environment
+- .env does not go to Git
 
-## Lojas suportadas
+## Supported stores
 
-- Books to Scrape (estatico): titulo + preco
-- Quotes to Scrape (estatico): frase + autor
-- Quotes JS (dinamico): frase + autor
+- Books to Scrape (static): title + price
+- Quotes to Scrape (static): quote + author
+- Quotes JS (dynamic): quote + author
 
-## Autor
+## Author
 
 SlinkierBook - https://github.com/SlinkierBook
 
-## Licenca
+## License
 
-Este projeto e de uso livre para estudo e portfolio.
+This project is free to use for study and portfolio.
