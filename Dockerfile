@@ -14,6 +14,8 @@ RUN pip install playwright
 RUN playwright install chromium
 RUN playwright install-deps chromium
 
+RUN mkdir -p /app/logs /app/data
+
 COPY . .
 
 EXPOSE 5000

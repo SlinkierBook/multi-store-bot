@@ -1,8 +1,11 @@
+import os
 import logging
 from logging.handlers import RotatingFileHandler
 
 
 def configure_log():
+    os.makedirs("/app/logs", exist_ok=True)
+    
     handler = RotatingFileHandler(
         "/app/logs/bot.log",
         maxBytes=10*1024*1024,
