@@ -11,3 +11,5 @@ SQL injection protection with parameterized queries
 Modular architecture supporting multiple data sources
 
 Built as a practice project using publicly available test sites (books.toscrape.com, quotes.toscrape.com) designed specifically for scraping practice.
+
+"I always check a site's Terms of Service and robots.txt before automating any data collection, and only work with official APIs or explicit client authorization for production projects."
